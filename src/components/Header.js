@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { withRouter } from 'react-router';
-import { AUTH_TOKEN } from '../constants';
+import { AUTH_TOKEN } from '../constants'
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import { withRouter } from 'react-router'
 
 class Header extends Component {
   render() {
@@ -27,10 +27,9 @@ class Header extends Component {
             <div
               className="ml1 pointer black"
               onClick={() => {
-                localStorage.removeItem(AUTH_TOKEN);
-                this.props.history.push('/');
-              }}
-            >
+                localStorage.removeItem(AUTH_TOKEN)
+                this.props.history.push('/')
+              }}>
               Logout
             </div>
           ) : (
@@ -40,8 +39,8 @@ class Header extends Component {
           )}
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default withRouter(Header);
+export default withRouter(Header)
